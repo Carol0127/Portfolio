@@ -219,14 +219,14 @@ function Home() {
     const ctx = gsap.context(() => {
       // 1. Hero 區塊的進場動畫
       gsap.from(".hero-anim, .shrink", {
-        z: -200, // 從 Z 軸深處推出來 (需確保父層有 perspective 屬性)
-        filter: "blur(10px)", // 模擬失焦到對焦
+        z: -200,
+        filter: "blur(10px)",
         opacity: 0,
         scale: 0.8,
         duration: 1.5,
         stagger: {
-          amount: 0.5, // 總共花 0.5 秒把所有元素錯開觸發完畢
-          from: "random", // 隨機順序浮現，科技感十足
+          amount: 0.5,
+          from: "random",
         },
         ease: "expo.out",
         delay: 0.2,
@@ -235,21 +235,27 @@ function Home() {
       // 2. 每個 Section 的滾動視差進場
       const sections = gsap.utils.toArray(".scroll-section");
       sections.forEach((sec) => {
-        gsap.from(sec.querySelectorAll(".gsap-up"), {
-          scrollTrigger: {
-            trigger: sec,
-            start: "top 85%",
-          },
-          y: 50,
-          opacity: 0,
-          duration: 0.8,
-          stagger: 0.1,
-          ease: "power3.out",
-        });
+        // 先把該區塊內的元素抓出來
+        const upElements = sec.querySelectorAll(".gsap-up");
+
+        // 👉 關鍵修復：檢查裡面如果有東西 (長度大於 0)，才叫 GSAP 執行動畫
+        if (upElements.length > 0) {
+          gsap.from(upElements, {
+            scrollTrigger: {
+              trigger: sec,
+              start: "top 85%",
+            },
+            y: 50,
+            opacity: 0,
+            duration: 0.8,
+            stagger: 0.1,
+            ease: "power3.out",
+          });
+        }
       });
     }, mainRef);
 
-    return () => ctx.revert(); // 清理 GSAP
+    return () => ctx.revert();
   }, []);
 
   // --- Cursor Tracking 邏輯 ---
