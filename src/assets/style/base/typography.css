@@ -1,0 +1,169 @@
+/* * 規則定義：
+ * 字距 (Letter Spacing): 統一為 2% (0.02em)
+ * 行高 (Line Height): Body 系列為 160% (1.6)，其餘全為 120% (1.2)
+ */
+
+@utility text-display-1 {
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  font-size: 56px;
+
+  @media (min-width: 768px) {
+    font-size: 72px;
+  }
+}
+
+@utility text-display-2 {
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  font-size: 34px;
+
+  @media (min-width: 768px) {
+    font-size: 56px;
+  }
+}
+
+@utility text-h1 {
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  font-size: 32px;
+
+  @media (min-width: 768px) {
+    font-size: 40px;
+  }
+}
+
+@utility text-h2 {
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  font-size: 28px;
+
+  @media (min-width: 768px) {
+    font-size: 32px;
+  }
+}
+
+@utility text-h3 {
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  font-size: 24px;
+
+  @media (min-width: 768px) {
+    font-size: 28px;
+  }
+}
+
+@utility text-h4 {
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  font-size: 20px;
+
+  @media (min-width: 768px) {
+    font-size: 24px;
+  }
+}
+
+@utility text-h5 {
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  font-size: 18px;
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+  }
+}
+
+@utility text-h6 {
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  font-size: 16px;
+
+  @media (min-width: 768px) {
+    font-size: 18px;
+  }
+}
+
+/* =========================================
+   Body 內文系列 (行高 160%)
+   ========================================= */
+
+@utility text-body-m {
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 1.6;
+  font-size: 16px;
+
+  @media (min-width: 768px) {
+    font-size: 18px;
+  }
+}
+
+@utility text-body-s {
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* =========================================
+   Buttons & Labels 按鈕與標籤系列 (行高 120%)
+   ========================================= */
+
+@utility text-btn-l {
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  font-size: 16px;
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+  }
+}
+
+@utility text-btn-m {
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  font-size: 14px;
+
+  @media (min-width: 768px) {
+    font-size: 16px;
+  }
+}
+
+@utility text-btn-s {
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  font-size: 12px;
+
+  @media (min-width: 768px) {
+    font-size: 14px;
+  }
+}
+
+@utility text-label-m {
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  font-size: 12px;
+
+  @media (min-width: 768px) {
+    font-size: 14px;
+  }
+}
+
+@utility text-label-s {
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  font-size: 12px;
+}

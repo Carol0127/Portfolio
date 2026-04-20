@@ -1,0 +1,19 @@
+@theme {
+  /* Neutral Colors */
+  --color-neutral-100: #ffffff;
+  --color-neutral-200: #f2f2f2;
+  --color-neutral-300: #d1d1d1;
+  --color-neutral-400: #a0a0a0;
+  --color-neutral-500: #6e6e6e;
+  --color-neutral-600: #444444;
+  --color-neutral-700: #3d3d3d;
+  --color-neutral-800: #2c2c2c;
+  --color-neutral-900: #1a1a1a;
+
+  /* Primary Colors */
+  --color-primary-100: #fff0f6;
+  --color-primary-200: #ffb0ce;
+  --color-primary-300: #ff7aac;
+  --color-primary-400: #e65a8e;
+  --color-primary-500: #c44b78;
+}

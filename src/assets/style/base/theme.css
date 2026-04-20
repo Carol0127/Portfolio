@@ -1,0 +1,32 @@
+@theme {
+  --font-sans: "Noto Sans TC", sans-serif;
+  --font-dela: "Dela Gothic One", cursive;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    @apply text-neutral-800;
+  }
+}
+
+@utility font-dela {
+  font-family: var(--font-dela);
+  line-height: 120%;
+}
+
+@utility custom-scrollbar {
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #d4d4d4;
+    border-radius: 10px;
+    &:hover {
+      background: #262626;
+    }
+  }
+}
