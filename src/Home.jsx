@@ -583,22 +583,24 @@ function Home() {
                 </div>
 
                 {/* 右上角 Hover 出現的連結區塊 */}
-                <div className="absolute top-0 right-0 flex transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+                <div className="space-y-2 lg:space-y-0 lg:flex mt-4 lg:mt-0 lg:absolute lg:top-0 lg:right-0 transition-opacity duration-300 opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
                   <a
                     href={project.demo}
                     target="_blank"
-                    className="flex items-center gap-1 p-3 bg-neutral-800 text-white hover:bg-primary-300 transition-colors border-r border-neutral-700"
+                    rel="noopener noreferrer"
+                    className="flex-1 lg:flex-none flex items-center justify-center gap-1 p-3 bg-neutral-800 text-white hover:bg-primary-300 transition-colors border-r border-neutral-700"
                   >
-                    <span className="text-body-s font-bold">LIVE DEMO</span>
-                    <span className="material-symbols-outlined text-[24px]!">arrow_outward</span>
+                    <span className="text-h6 ">LIVE DEMO</span>
+                    <span className="material-symbols-outlined text-[20px] lg:text-[24px]!">arrow_outward</span>
                   </a>
                   <a
                     href={project.repo}
                     target="_blank"
-                    className="flex items-center gap-1 p-3 bg-neutral-800 text-white hover:bg-primary-300 transition-colors"
+                    rel="noopener noreferrer"
+                    className="flex-1 lg:flex-none flex items-center justify-center gap-1 p-3 bg-neutral-800 text-white hover:bg-primary-300 transition-colors"
                   >
-                    <span className="text-body-s font-bold">REPO</span>
-                    <span className="material-symbols-outlined text-[24px]!">code</span>
+                    <span className="text-h6 ">REPO</span>
+                    <span className="material-symbols-outlined text-[20px] lg:text-[24px]!">code</span>
                   </a>
                 </div>
               </div>
