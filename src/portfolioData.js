@@ -45,7 +45,7 @@ export const projectData = [
       {
         title: "挑戰 1：Redux 狀態集中管理",
         content:
-          "【痛點】初期使用 Props Drilling 傳遞購物車與會員狀態，隨功能擴增導致元件層級過深，狀態難以追蹤。\n\n【實作】導入 Redux Toolkit 將購物車、使用者、訂單等狀態拆分為 8 個獨立 Slice 集中管理，並搭配 useSelector 提取資料。\n\n【結果】解決跨層級資料傳遞問題，落實關注點分離，提升 UI 元件的可維護性。",
+          "【痛點】初期使用 Props Drilling 傳遞購物車與會員狀態，隨功能擴增導致元件層級過深，狀態難以追蹤。\n\n【實作】導入 Redux Toolkit 將購物車、使用者、訂單等狀態拆分為獨立 Slice 集中管理，並搭配 useSelector 提取資料。\n\n【結果】解決跨層級資料傳遞問題，落實關注點分離，提升 UI 元件的可維護性。",
       },
       {
         title: "挑戰 2：API 資料正規化與錯誤攔截",
@@ -55,7 +55,7 @@ export const projectData = [
       {
         title: "挑戰 3：React Hook Form 結帳邏輯",
         content:
-          "【實作】使用 React Hook Form 構建結帳表單。透過註冊欄位規則實作即時格式驗證，並結合元件狀態完成動態運費計算。\n\n【結果】減少不必要的元件重新渲染 (Re-render)，確保送出至 API 的訂單 payload 格式正確。",
+          "【實作】使用 React Hook Form 構建結帳表單。透過註冊欄位規則實作即時格式驗證，並結合元件狀態完成動態運費計算。\n\n【結果】減少不必要的元件重新渲染 ，確保送出至 API 的訂單 payload 格式正確。",
       },
       {
         title: "挑戰 4：CSS 渲染衝突排查",

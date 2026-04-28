@@ -387,16 +387,16 @@ function Home() {
           className="scroll-section bg-neutral-300 px-4 py-20 lg:py-30"
         >
           <div className="max-w-324 mx-auto">
-            <h4 className="gsap-up tagHeading font-dela text-[30px] lg:text-[56px] ">SIDE PROJECT</h4>
+            <h4 className="gsap-up tagHeading font-dela text-[30px] lg:text-[56px] lg:mb-10">SIDE PROJECT</h4>
             {projectData.map((project) => (
               <div
                 key={project.id}
-                className="gsap-up group bg-white p-4 lg:p-6 mb-10 relative "
+                className="gsap-up group bg-white p-4 lg:p-6 mb-10 lg:mb-20 relative "
               >
                 <img
                   src={project.hero}
                   alt={project.projectName}
-                  className="w-full h-46.75 lg:h-105 object-cover mb-6"
+                  className="w-full h-46.75 lg:h-105 object-cover mb-4 lg:mb-10"
                 />
 
                 <div className="grid lg:grid-cols-2 gap-8 items-start">
