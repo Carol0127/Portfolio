@@ -399,18 +399,22 @@ function Home() {
                   className="w-full h-46.75 lg:h-105 object-cover mb-6"
                 />
 
-                <div className="grid lg:grid-cols-2 gap-6 items-start">
+                <div className="grid lg:grid-cols-2 gap-8 items-start">
+                  {/* 左側:專案資訊 */}
                   <div className="col-span-1 space-y-3">
                     <p className="px-4 py-2 bg-neutral-800 text-white text-h4 inline-block">{project.tags}</p>
-                    <h2 className="text-display-2">{project.projectName}</h2>
+                    <h2 className="text-display-2 ">{project.projectName}</h2>
                     <p className="text-label-m">{project.category}</p>
+
                     <p className="text-body-s">{project.intro}</p>
+                    <hr />
+                    <p className="text-body-s whitespace-pre-line leading-relaxed">{project.highlights}</p>
                   </div>
 
                   {/* 右側技術挑戰區塊 (手風琴) */}
-                  <div className="col-span-1 space-y-5">
+                  <div className="col-span-1 space-y-4">
                     <h4 className="text-h4"># 技術實踐與開發攻克</h4>
-                    <div className="flex flex-col space-y-5">
+                    <div className="flex flex-col space-y-4">
                       {project.challenges.map((item) => (
                         <div key={item.title}>
                           <div
@@ -445,7 +449,7 @@ function Home() {
                 </div>
 
                 {/* 右上角 Hover 出現的連結區塊 */}
-                <div className="space-y-2 lg:space-y-0 lg:flex mt-4 lg:mt-0 lg:absolute lg:top-0 lg:right-0 transition-opacity duration-300 opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
+                <div className="space-y-2 lg:space-y-0 lg:flex mt-4 lg:mt-0 lg:absolute lg:top-0 lg:right-0 ">
                   <a
                     href={project.demo}
                     target="_blank"

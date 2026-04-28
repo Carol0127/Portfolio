@@ -35,24 +35,32 @@ export const projectData = [
     hero: "https://github.com/Carol0127/PortfolioPhoto/blob/main/lanuit.jpg?raw=true",
     projectName: "La Nuit Puff",
     tags: "REACT + VITE + Bootstrap",
-    category: "E-COMMERCE‧2026",
+    category: "E-COMMERCE‧2025-2026",
+
     intro:
-      "專為法式甜點設計的線上購物平台，包含完整購物車邏輯與後台管理系統，專注於流暢的結帳流程與現代化的 UI 介面。歷經 6 週設計規劃後，用 18 天業餘時間完成 15+ 頁面 React 開發。整合 Redux 全域狀態管理與獨立後台 CRUD 系統。",
+      "法式甜點線上購物平台，涵蓋前台購物車與 Admin 後台系統。6 週規劃 + 18 天開發完成 15+ 頁面，專注於狀態管理與結帳流程實作。",
+    highlights:
+      "• 狀態管理重構: 導入 RTK 解決逐層傳遞問題，提升程式可讀性與擴展性。\n• 表單驗證處理: 整合 React Hook Form 處理結帳與註冊等 5+ 種表單驗證。\n• API 串接整合: 介接 20+ 個 RESTful API，建置資料映射層處理格式差異。\n• 獨立後台開發: 建置 Admin Panel 支援商品 CRUD 與 Route Guard 權限控管。",
     challenges: [
       {
-        title: "開發亮點與歷程",
+        title: "挑戰 1：Redux 狀態集中管理",
         content:
-          "• 狀態管理: 使用 Redux Toolkit 建立 8 個 Slice 統籌全域狀態。\n• 表單驗證: 整合 React Hook Form 處理 5+ 種表單邏輯。\n• API 整合: 串接 20+ 個 API，處理商品 CRUD 與訂單管理。\n• 獨立後台: 開發管理系統，支援商品上架、分類管理與圖片上傳。",
+          "【痛點】初期使用 Props Drilling 傳遞購物車與會員狀態，隨功能擴增導致元件層級過深，狀態難以追蹤。\n\n【實作】導入 Redux Toolkit 將購物車、使用者、訂單等狀態拆分為 8 個獨立 Slice 集中管理，並搭配 useSelector 提取資料。\n\n【結果】解決跨層級資料傳遞問題，落實關注點分離，提升 UI 元件的可維護性。",
       },
       {
-        title: "挑戰 1: CSS 動畫庫衝突",
+        title: "挑戰 2：API 資料正規化與錯誤攔截",
         content:
-          "在開發過程中發現 API 回傳的原始資料欄位無法完全支援視覺設計的需求。為確保不影響進度，我梳理了前端資料映射邏輯，在資料進入組件前進行補完與格式化，確保前端介面具備豐富展示內容，同時維持資料結構嚴謹性。",
+          "【痛點】後端 API 回傳的資料結構與 UI 介面需求不符，且缺乏統一的錯誤處理機制。\n\n【實作】在 API 與 UI 層間建置「資料映射層 (Data Mapping)」預先清洗與格式化資料。並結合 Axios Interceptor 統一攔截 401/500 錯誤。\n\n【結果】統一前端資料格式，並驅動全域 Loading 與 Toast 提示，提升系統容錯率與使用者體驗。",
       },
       {
-        title: "挑戰 2: 購物車狀態同步",
+        title: "挑戰 3：React Hook Form 結帳邏輯",
         content:
-          "專案中使用 AOS 增加視覺動態，但在特定頁面發現其 transform 屬性會與 Bootstrap 5 佈局引擎產生位移衝突。局部優化：針對衝突區塊停用 AOS 並改以原生 CSS 轉場實作；相容良好的頁面則保留。這次經驗鍛鍊了我排查 CSS 渲染衝突的能力，在技術限制與視覺效果間找到最佳平衡。",
+          "【實作】使用 React Hook Form 構建結帳表單。透過註冊欄位規則實作即時格式驗證，並結合元件狀態完成動態運費計算。\n\n【結果】減少不必要的元件重新渲染 (Re-render)，確保送出至 API 的訂單 payload 格式正確。",
+      },
+      {
+        title: "挑戰 4：CSS 渲染衝突排查",
+        content:
+          "【痛點】專案導入 AOS 動畫庫，其 transform 屬性與 Bootstrap 5 網格系統產生位移衝突。\n\n【實作】利用 Chrome DevTools 檢測並定位衝突節點。針對受影響區塊移除 AOS，改以原生 CSS Transition 實作動態效果。\n\n【結果】解決跑版問題，在維持視覺動態效果的同時確保版面穩定。",
       },
     ],
   },
@@ -61,28 +69,34 @@ export const projectData = [
     demo: "https://carol0127.github.io/OOPS/",
     repo: "https://github.com/Carol0127/OOPS",
     hero: "https://github.com/Carol0127/PortfolioPhoto/blob/main/%E6%BA%90%E5%88%9D%E7%B6%AD%E5%BA%A6.webp?raw=true",
-    projectName: "OOPS",
+    projectName: "OOPS 形象網站",
     tags: "REACT + VITE + Firebase + Tailwind",
     category: "SERVERLESS PLATFORM‧2026",
     intro:
-      "整合 React 與 Firebase 的品牌形象網站。系統建構於 Firebase BaaS 架構並導入 GSAP。前期規劃2週完成 Figma 稿與資料庫設計；專注開發10天內達成 React 元件化、Firebase 串接與 RWD 適配。",
+      "整合 React 與 Firebase 的品牌形象網站。前期規劃 2 週完成視覺與資料庫設計；隨後於 10 天內完成 React 元件化、Firebase 串接與 RWD 適配，並導入 GSAP 動畫。",
+
+    highlights:
+      "• BaaS 系統整合: 導入 Firebase Auth 與 Firestore，規劃 4 個集合處理資料建模。\n• 資料流解耦: 建立獨立 Service Layer 抽離資料庫邏輯，降低元件耦合。\n• 網站效能調校: 配置 Vite Code Splitting 將載入時間由 5 秒縮短至 2 秒。\n• 即時資料同步: 完成前台表單提交與後台 CRUD 即時動態渲染。",
     challenges: [
       {
-        title: "開發亮點與歷程",
+        title: "挑戰 1：BaaS 獨立開發與 Service Layer 封裝",
         content:
-          "• BaaS 系統整合：實作 Firebase Auth 狀態持久化，並正規化設計 4 個 Firestore 集合與 Storage 存儲架構。\n" +
-          "• 資料流封裝：建立獨立的 Service Layer 處理資料庫操作，實現高度解耦的 React 元件設計。\n" +
-          "• 網站效能優化：基於 Vite 環境開發，並運用 Code Splitting 技術將載入效能從5秒優化到2秒。",
+          "【痛點】受限於後端資源，難以獨立實作動態資料庫。若將 Firebase 查詢直寫於元件中，容易導致代碼高度耦合。\n\n【實作】導入 Firebase (BaaS) 自主規劃 Firestore 資料建模。建立 Service Layer 抽離 CRUD 與 Auth 邏輯。\n\n【結果】React 元件僅需呼叫 Service 方法，實現關注點分離，縮短專案的開發週期。",
       },
       {
-        title: "挑戰 1: 獨立開發的全棧解決方案",
+        title: "挑戰 2：權限防護與即時資料同步",
         content:
-          "過去設計經驗常受限於後端支援，難以實作客製化管理功能。本專案首次採用 Firebase (BaaS)，自主規劃 Firestore 非關聯式資料建模，精確定義前端所需的資料格式，成功實踐前端獨立完成全棧開發的可能性，大幅縮短開發週期並降低維護門檻。",
+          "【實作】整合 Firebase Auth 與 React Router 實作 Route Guard (路由守衛)，未授權使用者自動導向登入頁。\n\n【結果】前台聯絡表單運用 Firestore 的 onSnapshot 特性，讓提交資料即時同步至後台管理端。",
       },
       {
-        title: "挑戰 2: 動態視覺的代碼實作",
+        title: "挑戰 3：Vite 底層效能調校",
         content:
-          "專案導入 GSAP 並結合 AI 協作。透過 AI 快速生成動畫語法雛形，再由我手動微調 ScrollTrigger 觸發時機與 Timeline 節奏。",
+          "【痛點】網站包含大量影像與動畫，初始載入約 5 秒，影響 LCP 指標。\n\n【實作】配置 Vite 的 manualChunks 將第三方套件 (node_modules) 獨立打包 (Vendor Splitting) 以避免主程式碼阻塞，並執行圖片壓縮優化。\n\n【結果】將初始載入時間縮短至 2 秒以內，顯著改善網頁載入效能。",
+      },
+      {
+        title: "挑戰 4：AI 協作與 GSAP 動畫實作",
+        content:
+          "【痛點】複雜的滾動觸發與序列動畫若純手工撰寫，將耗費較多的開發時間。\n\n【實作】採用 AI 輔助生成 GSAP 邏輯雛形，後續再由人工手動精準調校。\n\n【結果】高效率完成品牌視覺的動態實作，並確保跨裝置動畫的流暢度。",
       },
     ],
   },
