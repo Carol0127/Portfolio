@@ -40,7 +40,7 @@ export const projectData = [
     intro:
       "法式甜點線上購物平台，涵蓋前台購物車與 Admin 後台系統。6 週規劃 + 18 天開發完成 15+ 頁面，專注於狀態管理與結帳流程實作。",
     highlights:
-      "• 狀態管理重構: 導入 RTK 解決逐層傳遞問題，提升程式可讀性與擴展性。\n• 表單驗證處理: 整合 React Hook Form 處理結帳與註冊等 5+ 種表單驗證。\n• API 串接整合: 介接 20+ 個 RESTful API，建置資料映射層處理格式差異。\n• 獨立後台開發: 建置 Admin Panel 支援商品 CRUD 與 Route Guard 權限控管。",
+      "• 狀態管理重構: 導入 RTK 解決逐層傳遞問題，提升程式可讀性與擴展性。\n• 表單驗證處理: 整合 React Hook Form 處理結帳與註冊等 5+ 種表單驗證。\n • API 串接整合：介接 20+ 個 RESTful API，封裝 Axios service layer，集中管理前後台請求、錯誤回傳與資料格式轉換，降低元件與 API 細節耦合。\n• 獨立後台開發: 建置 Admin Panel 支援商品 CRUD 與 Route Guard 權限控管。",
     challenges: [
       {
         title: "挑戰 1：Redux 狀態集中管理",
@@ -48,9 +48,9 @@ export const projectData = [
           "【痛點】初期使用 Props Drilling 傳遞購物車與會員狀態，隨功能擴增導致元件層級過深，狀態難以追蹤。\n\n【實作】導入 Redux Toolkit 將購物車、使用者、訂單等狀態拆分為獨立 Slice 集中管理，並搭配 useSelector 提取資料。\n\n【結果】解決跨層級資料傳遞問題，落實關注點分離，提升 UI 元件的可維護性。",
       },
       {
-        title: "挑戰 2：API 資料正規化與錯誤攔截",
+        title: "挑戰 2：API 串接與資料處理優化",
         content:
-          "【痛點】後端 API 回傳的資料結構與 UI 介面需求不符，且缺乏統一的錯誤處理機制。\n\n【實作】在 API 與 UI 層間建置「資料映射層 (Data Mapping)」預先清洗與格式化資料。並結合 Axios Interceptor 統一攔截 401/500 錯誤。\n\n【結果】統一前端資料格式，並驅動全域 Loading 與 Toast 提示，提升系統容錯率與使用者體驗。",
+          "【痛點】後端 API 回傳資料與前端 UI 顯示需求不完全一致，且各頁面若各自處理錯誤提示，容易造成重複邏輯與維護成本。\n\n【實作】封裝 Axios service layer 統一管理 API 請求，並在送出訂單、渲染訂單狀態與商品資料前，依 UI 需求整理資料格式。搭配 SweetAlert2 Toast 統一成功、失敗與刪除確認提示，並於登入驗證、商品詳情與圖片上傳等流程加入 Loading 狀態。\n\n【結果】降低元件與 API 請求細節的耦合，讓資料處理、錯誤提示與畫面渲染職責更清楚，提升購物、結帳與後台管理流程的可維護性。",
       },
       {
         title: "挑戰 3：React Hook Form 結帳邏輯",
